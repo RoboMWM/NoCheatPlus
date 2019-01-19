@@ -1005,6 +1005,9 @@ public class BlockProperties {
                 setFlag(mat, F_SOLID | F_GROUND);
             }
 
+            //very lazy compat with newer stuff
+            if (!mat.isOccluding())
+                setFlag(mat, F_IGN_PASSABLE | F_GROUND_HEIGHT);
         }
 
         BlockProps props;
