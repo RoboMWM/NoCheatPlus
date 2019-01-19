@@ -456,12 +456,13 @@ public class SurvivalFly extends Check {
         }
         else if (thisMove.from.inLiquid) { // && (Math.abs(yDistance) > 0.2 || to.isInLiquid())) {
             // Swimming...
-            final double[] res = vDistLiquid(from, to, toOnGround, yDistance, lastMove, data);
-            vAllowedDistance = res[0];
-            vDistanceAboveLimit = res[1];
-            if (vDistanceAboveLimit <= 0.0 && yDistance > 0.0 && Math.abs(yDistance) > Magic.swimBaseSpeedV()) {
-                data.setFrictionJumpPhase();
-            }
+            //TODO: Vertical check in liquid should be same as horizontal check now.
+//            final double[] res = vDistLiquid(from, to, toOnGround, yDistance, lastMove, data);
+//            vAllowedDistance = res[0];
+//            vDistanceAboveLimit = res[1];
+//            if (vDistanceAboveLimit <= 0.0 && yDistance > 0.0 && Math.abs(yDistance) > Magic.swimBaseSpeedV()) {
+//                data.setFrictionJumpPhase();
+//            }
         }
         else {
             final double[] res = vDistAir(now, player, from, fromOnGround, resetFrom, 
