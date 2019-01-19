@@ -1006,7 +1006,7 @@ public class BlockProperties {
             }
 
             //very lazy compat with newer stuff
-            if (!mat.isOccluding())
+            if (mat.isBlock() && !mat.isOccluding())
                 setFlag(mat, F_IGN_PASSABLE | F_GROUND_HEIGHT);
         }
 
